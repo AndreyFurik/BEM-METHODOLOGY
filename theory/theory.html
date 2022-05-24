@@ -11,3 +11,104 @@
 
 <!-- Block__Element_Modifier -->
 <div class="list__item_active"></div>
+
+<!-- Block - a certain independent component, the name of the block characterizes the meaning "what is it?" -->
+
+<!-- True  -->
+<div class="logo"></div>
+<nav class="menu"></nav>
+<div class="error"></div>
+
+<!-- False -->
+<div class="big-item"></div>
+<div class="orange-text"></div>
+
+<!-- The principle of working with blocks -->
+<header class="header">
+    <div class="logo"></div>
+    <nav class="menu"></nav>
+</header>
+
+<!-- Element - A component of a block that cannot be used in isolation from it. The name of the Element characterizes the meaning "what is it?" -->
+<header class="header">
+    <div class="header__logo"></div>
+    <nav class="header__menu"></nav>
+</header>
+
+<form class="search-form">
+    <input class="search-form__input">
+    <button class="search-form__button">Найти</button>
+</form>
+
+<!-- Nesting -->
+
+<!-- True  -->
+<div class="about">
+    <div class="about__inner">
+        <div class="about__items"></div>
+    </div>
+</div>
+
+<!-- or -->
+
+<div class="about">
+    <div class="about__inner">
+        <div class="about__inner-items"></div>
+    </div>
+</div>
+
+<!-- False -->
+
+<div class="about">
+    <div class="about__inner">
+        <div class="about__inner__items"></div>
+    </div>
+</div>
+
+<!-- The important principle of nesting -->
+
+
+<!-- Example -->
+ <div class="block">
+     <div class="block__element1">
+         <div class="block__element2">
+             <div class="block__element3"></div>
+         </div>
+     </div>
+ </div>
+
+ .block{}
+ .block__element1{}
+ .block__element2{}
+ .block__element3{}
+
+ <!-- An element is an optional block component. Not all blocks need to have elements -->
+ 
+ 
+<!-- Modifier -->
+<!-- An entity that defines the appearance, state or behavior of a block or element. -->
+<!-- The name of the modifier characterizes the appearance, "what size?", "what theme?" -->
+active
+size--lg
+<!-- Modifier types -->
+<!-- Boolean -->
+<!-- Used when the presence or absence of a modifier is important -->
+active
+disable
+focused
+<!-- Key-value -->
+<!-- Used when the value of the modifier is important -->
+size--lg
+theme--space
+theme--winter
+
+<!-- The structure of the full name of the modifier follows the scheme: -->
+<!-- block-name--modifier-name--modifier-value -->
+<!-- block-name__element-name--modifier-name--modifier-value -->
+
+<!-- The modifier cannot be used alone -->
+<!-- technique -->
+<div class="search-form heade__search-form"></div>
+
+
+<!-- file structure -->
